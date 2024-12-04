@@ -9,11 +9,12 @@ import {MatToolbar} from '@angular/material/toolbar';
 import {HttpClient} from '@angular/common/http';
 import {LoginComponent} from './components/login/login.component';
 import {AuthService} from './services/auth.service';
+import {MatButton} from '@angular/material/button';
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, TatoueurComponent, MatSidenavContent, MatListItem, MatIcon, MatNavList, MatSidenav, MatSidenavContainer, MatToolbar],
+  imports: [RouterOutlet, TatoueurComponent, MatSidenavContent, MatListItem, MatIcon, MatNavList, MatSidenav, MatSidenavContainer, MatToolbar, RouterLink, MatButton],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
