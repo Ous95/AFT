@@ -15,7 +15,7 @@
         <! pour définir les liens du menu>
         <a routerLink="/login">
           <mat-icon>login</mat-icon>
-          <span>Login</span>
+          <span>Se connecter</span>
         </a>
       </mat-list-item>
       <mat-list-item>
@@ -29,11 +29,11 @@
     Bienvenue !
     <div [hidden]="!authenticated()">
       <p>Vous êtes connecté.e</p>
-    </div>
     <button mat-button (click)="logout()">
       <mat-icon>logout</mat-icon>
       Se déconnecter
     </button>
+    </div>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
