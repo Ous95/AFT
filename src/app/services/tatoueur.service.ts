@@ -8,7 +8,7 @@ import {AuthService} from './auth.service';
 })
 export class TatoueurService {
 //Variable de classe contenant l'url de notre API
-  private apiUrl = 'http://localhost:8080/tatoueur';
+  private apiUrl = 'http://localhost:8080/tatoueurs';
 
   constructor(private http: HttpClient, private auth: AuthService) {
   }

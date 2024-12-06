@@ -1,11 +1,11 @@
 <p>Tatoueurs du salon :</p>
-<ul>
-  @for (tatoueur of tatoueurs;track tatoueur.id){
-    <li>
-      <p>{{tatoueur.nom}}</p>
-    </li>
-  }
-</ul>
+<!--<ul>-->
+<!--  @for (tatoueur of tatoueurs;track tatoueur.id){-->
+<!--    <li>-->
+<!--      <p>{{tatoueur.nom}}</p>-->
+<!--    </li>-->
+<!--  }-->
+<!--</ul>-->
 <div [hidden]="!authenticated()">
   <a routerLink="/tatoueur/create">Ajouter un tatoueur</a>
 </div>

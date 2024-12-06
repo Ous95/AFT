@@ -14,13 +14,28 @@ import {
   MatHeaderRowDef,
   MatRow,
   MatRowDef,
-  MatTable
+  MatTable, MatTableModule
 } from '@angular/material/table';
+
+/*
+export interface PeriodicElement {
+  name: string;
+  style: string;
+}
+
+const ELEMENT_DATA: PeriodicElement[] = [
+  {name: 'Hydrogen', style: 'H'},
+  {name: 'snakeViper', style: 'H'},
+  {name: 'HyViper', style: 'H'},
+  {name: 'HydroViper', style: 'H'},
+  {name: 'HViper', style: 'H'},
+  ];
+*/
 
 @Component({
   selector: 'app-tatoueur',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, MatTable, MatColumnDef, MatHeaderCell, MatCell, MatAnchor,
+  imports: [RouterOutlet, RouterLink, MatTable, MatTableModule, MatColumnDef, MatHeaderCell, MatCell, MatAnchor,
     MatButton, MatHeaderRow, MatRow, MatRowDef, MatHeaderRowDef, MatCellDef, MatHeaderCellDef,
     NgIf],
   templateUrl: './tatoueur.component.html',

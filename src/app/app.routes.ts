@@ -1,18 +1,33 @@
 import { Routes } from '@angular/router';
 import {TatoueurComponent} from './components/tatoueur/tatoueur.component';
 import {LoginComponent} from './components/login/login.component';
+import {TatoueurCreateComponent} from './components/tatoueur/tatoueur-create/tatoueur-create.component';
+import {TatoueurEditComponent} from './components/tatoueur/tatoueur-edit/tatoueur-edit.component';
+import {TatoueurViewComponent} from './components/tatoueur/tatoueur-view/tatoueur-view.component';
 
 export const routes: Routes = [
   {
-    path: 'tatoueurs',
+    path: 'tatoueur',
     title: 'Nos tatoueurs',
     component: TatoueurComponent,
   },
   {
+    path: 'tatoueur/:tatoueurId/view',
+    component: TatoueurViewComponent
+  },
+  {
+    path: 'tatoueur/create',
+    component: TatoueurCreateComponent
+  },
+  {
+    path: 'tatoueur/:tatoueurId/edit',
+    component: TatoueurEditComponent
+  },
+  {
     path: 'login',
-    title: 'les logins',
+    title: 'Se connecter',
     component: LoginComponent,
-  }
+  },
 ];
 
 
