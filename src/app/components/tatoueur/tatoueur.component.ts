@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {TatoueurService} from '../../services/tatoueur.service';
 import {Tatoueur} from '../../models/tatoueur.model';
-import {AuthService} from "../../services/auth.service";
 import {RouterLink, RouterOutlet} from '@angular/router'
 
 import {MatAnchor, MatButton} from '@angular/material/button';
@@ -16,6 +15,7 @@ import {
   MatRowDef,
   MatTable, MatTableModule
 } from '@angular/material/table';
+import {AuthService} from '../../services/auth.service';
 
 /*
 export interface PeriodicElement {
@@ -44,15 +44,12 @@ const ELEMENT_DATA: PeriodicElement[] = [
 export class TatoueurComponent implements OnInit {
 //Variable de classe qui contiendra notre tableau de tatoueurs
   tatoueurs: Tatoueur[] = [];
-  displayedColumns: string[] = ['nom', 'style'];
-  auth: any;
+  displayedColumns: string[] = ['nom', 'style', 'action'];
 
-  constructor(private tatoueurService: TatoueurService) {
+  constructor(private tatoueurService: TatoueurService,private auth: AuthService,) {
   }
 
-  authenticated() {
-    return this.auth.authenticated;
-  }
+  authenticated() { return this.auth.authenticated; }
 
   //Fonction exécutée à l'initiation du component
   ngOnInit(): void {

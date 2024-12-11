@@ -1,11 +1,4 @@
 <p>Tatoueurs du salon :</p>
-<!--<ul>-->
-<!--  @for (tatoueur of tatoueurs;track tatoueur.id){-->
-<!--    <li>-->
-<!--      <p>{{tatoueur.nom}}</p>-->
-<!--    </li>-->
-<!--  }-->
-<!--</ul>-->
 <div [hidden]="!authenticated()">
   <a routerLink="/tatoueur/create">Ajouter un tatoueur</a>
 </div>
@@ -24,6 +17,12 @@
       <a mat-button color="primary" [routerLink]="['/tatoueur/', tatoueur.id, 'view']">Voir</a>
       <a mat-button color="accent" [routerLink]="['/tatoueur/', tatoueur.id, 'edit']">Modifier</a>
       <button mat-button color="warn" (click)="deleteTatoueur(tatoueur.id)">Supprimer</button>
+    </td>
+  </ng-container>
+  <ng-container *ngIf="!authenticated()" matColumnDef="action">
+    <th mat-header-cell *matHeaderCellDef> Action </th>
+    <td mat-cell *matCellDef="let tatoueur">
+      <a mat-button color="primary" [routerLink]="['/tatoueur/', tatoueur.id, 'view']">Voir</a>
     </td>
   </ng-container>
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
