@@ -1,5 +1,6 @@
 <! pour créer une barre en haut de notre page web>
-<mat-toolbar> TattooShop </mat-toolbar>
+<img src="/93moove.png" alt = "img" class = "img" />
+
 <mat-sidenav-container>
   <! pour créer un menu à gauche>
   <mat-sidenav [opened]="true" mode="side">
@@ -14,15 +15,25 @@
       <mat-list-item>
         <! pour définir les liens du menu>
         <a routerLink="/login">
-          <mat-icon>login</mat-icon>
+
+          <div [hidden]="authenticated()">
           <span>Se connecter</span>
+
+          </div>
+          <div [hidden]="!authenticated()">
+            <button mat-button (click)="logout()">
+              Se déconnecter
+            </button>
+          </div>
         </a>
       </mat-list-item>
       <mat-list-item>
-        <a routerLink="/tatoueur">
-          Tatoueurs
+        <a routerLink="/cours">
+          Nos cours
+
         </a>
       </mat-list-item>
+
     <mat-list-item>
       <a routerLink="/client">
         Clients
@@ -34,10 +45,6 @@
     Bienvenue !
     <div [hidden]="!authenticated()">
       <p>Vous êtes connecté.e</p>
-    <button mat-button (click)="logout()">
-      <mat-icon>logout</mat-icon>
-      Se déconnecter
-    </button>
     </div>
     <router-outlet></router-outlet>
   </mat-sidenav-content>

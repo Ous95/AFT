@@ -14,7 +14,7 @@ import {MatButton} from '@angular/material/button';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, TatoueurComponent, MatSidenavContent, MatListItem, MatIcon, MatNavList, MatSidenav, MatSidenavContainer, MatToolbar, RouterLink, MatButton],
+  imports: [RouterOutlet, MatSidenavContent, MatListItem, MatIcon, MatNavList, MatSidenav, MatSidenavContainer, RouterLink, MatButton],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

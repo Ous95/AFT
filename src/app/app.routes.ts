@@ -4,6 +4,7 @@ import {LoginComponent} from './components/login/login.component';
 import {TatoueurViewComponent} from './components/tatoueur/tatoueur-view/tatoueur-view.component';
 import {TatoueurCreateComponent} from './components/tatoueur/tatoueur-create/tatoueur-create.component';
 import {TatoueurEditComponent} from './components/tatoueur/tatoueur-edit/tatoueur-edit.component';
+import {CoursComponent} from './components/cours/cours.component';
 export const routes: Routes = [
   {
     path: 'tatoueur',
@@ -26,6 +27,12 @@ export const routes: Routes = [
     path: 'login',
     title: 'Se connecter',
     component: LoginComponent,
+  },
+
+  {path: 'cours',
+  title: 'Nos Cours',
+  component: CoursComponent,
+
   },
 ];
 
