@@ -28,3 +28,6 @@ export class TatoueurCreateComponent {
     })
   }
 }
+
+export class TatoueuraCreateComponent {
+}

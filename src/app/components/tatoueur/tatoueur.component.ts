@@ -35,8 +35,9 @@ const ELEMENT_DATA: PeriodicElement[] = [
 @Component({
   selector: 'app-tatoueur',
   standalone: true,
-  imports: [ RouterLink, MatTable, MatTableModule, MatColumnDef, MatHeaderCell, MatCell, MatAnchor,
-    MatButton, MatHeaderRow, MatRow, NgIf],
+  imports: [RouterLink, MatTable, MatTableModule, MatColumnDef, MatHeaderCell, MatCell, MatAnchor,
+    MatButton, MatHeaderRow, MatRow,
+    NgIf],
   templateUrl: './tatoueur.component.html',
   styleUrl: './tatoueur.component.css'
 })

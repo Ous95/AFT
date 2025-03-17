@@ -38,3 +38,5 @@ export class TatoueurEditComponent {
   }
 }
 
+export class TatoueuraEditComponent {
+}
