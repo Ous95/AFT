@@ -9,8 +9,7 @@ import {TatoueuraViewComponent} from './components/tatoueura/tatoueura-view/tato
 import {TatoueuraCreateComponent} from './components/tatoueura/tatoueura-create/tatoueura-create.component';
 import {TatoueuraEditComponent} from './components/tatoueura/tatoueura-edit/tatoueura-edit.component';
 
-
-
+import {AdherentComponent} from './components/adherent/adherent.component';
 
 
 import {CoursComponent} from './components/cours/cours.component';
@@ -60,6 +59,11 @@ export const routes: Routes = [
   {
     path: 'tatoueura/:tatoueuraId/edit',
     component: TatoueuraEditComponent
+  },
+  {path: 'adherent',
+    title: 'Nos adherent',
+    component: AdherentComponent,
+
   },
 
 
