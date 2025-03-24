@@ -1,13 +1,13 @@
 import { Routes } from '@angular/router';
-import {TatoueurComponent} from './components/tatoueur/tatoueur.component';
-import {TatoueuraComponent} from './components/tatoueura/tatoueura.component';
+import {SportComponent} from './components/sport/sport.component';
+import {ActiviteComponent} from './components/activite/activite.component';
 import {LoginComponent} from './components/login/login.component';
-import {TatoueurViewComponent} from './components/tatoueur/tatoueur-view/tatoueur-view.component';
-import {TatoueurCreateComponent} from './components/tatoueur/tatoueur-create/tatoueur-create.component';
-import {TatoueurEditComponent} from './components/tatoueur/tatoueur-edit/tatoueur-edit.component';
-import {TatoueuraViewComponent} from './components/tatoueura/tatoueura-view/tatoueura-view.component';
-import {TatoueuraCreateComponent} from './components/tatoueura/tatoueura-create/tatoueura-create.component';
-import {TatoueuraEditComponent} from './components/tatoueura/tatoueura-edit/tatoueura-edit.component';
+import {SportViewComponent} from './components/sport/sport-view/sport-view.component';
+import {SportCreateComponent} from './components/sport/sport-create/sport-create.component';
+import {SportEditComponent} from './components/sport/sport-edit/sport-edit.component';
+import {ActiviteViewComponent} from './components/activite/activite-view/activite-view.component';
+import {ActiviteCreateComponent} from './components/activite/activite-create/activite-create.component';
+import {ActiviteEditComponent} from './components/activite/activite-edit/activite-edit.component';
 
 import {AdherentComponent} from './components/adherent/adherent.component';
 
@@ -15,21 +15,21 @@ import {AdherentComponent} from './components/adherent/adherent.component';
 import {CoursComponent} from './components/cours/cours.component';
 export const routes: Routes = [
   {
-    path: 'tatoueur',
-    title: 'Nos tatoueurs',
-    component: TatoueurComponent,
+    path: 'sport',
+    title: 'Nos Sports',
+    component: SportComponent,
   },
   {
-    path: 'tatoueur/:tatoueurId/view',
-    component: TatoueurViewComponent
+    path: 'sport/:sportId/view',
+    component: SportViewComponent
   },
   {
-    path: 'tatoueur/create',
-    component: TatoueurCreateComponent
+    path: 'sport/create',
+    component: SportCreateComponent
   },
   {
-    path: 'tatoueur/:tatoueurId/edit',
-    component: TatoueurEditComponent
+    path: 'sport/:sportId/edit',
+    component: SportEditComponent
   },
   {
     path: 'login',
@@ -43,22 +43,22 @@ export const routes: Routes = [
 
   },
 
-  {path: 'tatoueura',
-    title: 'Nos tatoueura',
-    component: TatoueuraComponent,
+  {path: 'activite',
+    title: 'Nos activites',
+    component: ActiviteComponent,
 
   },
   {
-    path: 'tatoueura/:tatoueuraId/view',
-    component: TatoueuraViewComponent
+    path: 'activite/:activiteId/view',
+    component: ActiviteViewComponent
   },
   {
-    path: 'tatoueura/create',
-    component: TatoueuraCreateComponent
+    path: 'activite/create',
+    component: ActiviteCreateComponent
   },
   {
-    path: 'tatoueura/:tatoueuraId/edit',
-    component: TatoueuraEditComponent
+    path: 'activite/:activiteId/edit',
+    component: ActiviteEditComponent
   },
   {path: 'adherent',
     title: 'Nos adherent',

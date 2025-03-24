@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
 import {Router, RouterLink, RouterOutlet} from '@angular/router';
 import {CookieComponent} from './cookie/cookie.component';
-import {TatoueurComponent} from './components/tatoueur/tatoueur.component';
+import {SportComponent} from './components/sport/sport.component';
+import {ActiviteComponent} from './components/activite/activite.component';
 import {MatSidenav, MatSidenavContainer, MatSidenavContent} from '@angular/material/sidenav';
 import {MatListItem, MatNavList} from '@angular/material/list';
 import {MatIcon} from '@angular/material/icon';
 import {MatToolbar} from '@angular/material/toolbar';
 import {HttpClient} from '@angular/common/http';
 import {LoginComponent} from './components/login/login.component';
-import {AuthService} from './services/auth.service';
+import {AuthService} from './services/auth/auth.service';
 import {MatButton} from '@angular/material/button';
 
 

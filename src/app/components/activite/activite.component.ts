@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {AdherentService} from '../../services/adherent/adherent.service';
-import {Adherent} from '../../models/adherent.model';
+import {ActiviteService} from '../../services/activite/activite.service';
+import {Activite} from '../../models/activite.model';
 import {RouterLink, RouterOutlet} from '@angular/router'
 
 import {MatAnchor, MatButton} from '@angular/material/button';
@@ -33,20 +33,20 @@ const ELEMENT_DATA: PeriodicElement[] = [
 */
 
 @Component({
-  selector: 'app-adherent',
+  selector: 'app-activite',
   standalone: true,
-  imports: [ RouterLink, MatTable, MatTableModule, MatColumnDef, MatHeaderCell, MatCell, MatAnchor,
+  imports: [RouterLink, MatTable, MatTableModule, MatColumnDef, MatHeaderCell, MatCell, MatAnchor,
     MatButton, MatHeaderRow, MatRow,
     NgIf],
-  templateUrl: './adherent.component.html',
-  styleUrl: './adherent.component.css'
+  templateUrl: './activite.component.html',
+  styleUrl: './activite.component.css'
 })
-export class AdherentComponent implements OnInit {
+export class ActiviteComponent implements OnInit {
 //Variable de classe qui contiendra notre tableau de tatoueurs
-  adherents: Adherent[] = [];
+  activites: Activite[] = [];
   displayedColumns: string[] = ['nom', 'style', 'action'];
 
-  constructor(private adherentService: AdherentService,private auth: AuthService,) {
+  constructor(private activiteService: ActiviteService, private auth: AuthService,) {
   }
 
   authenticated() { return this.auth.authenticated; }
@@ -54,19 +54,15 @@ export class AdherentComponent implements OnInit {
   //Fonction exécutée à l'initiation du component
   ngOnInit(): void {
 //Récupère les données du tatoueurService.
-    this.adherentService.getAdherent().subscribe((data: Adherent[]) => {
+    this.activiteService.getActivites().subscribe((data: Activite[]) => {
 //Mets les données dans notre variable de classe tatoueurs
-      this.adherents = data;
+      this.activites = data;
     });
   }
 
-  deleteAdherent(id: number) {
-    this.adherentService.delete(id).subscribe(res => {
-      this.adherents = this.adherents.filter(item => item.id !== id);
+  deleteActivite(id: number) {
+    this.activiteService.delete(id).subscribe(res => {
+      this.activites = this.activites.filter(item => item.id !== id);
     })
   }
-
-
-
 }
-
