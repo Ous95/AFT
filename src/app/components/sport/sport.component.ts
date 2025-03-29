@@ -17,20 +17,7 @@ import {
 } from '@angular/material/table';
 import {AuthService} from '../../services/auth/auth.service';
 
-/*
-export interface PeriodicElement {
-  name: string;
-  style: string;
-}
 
-const ELEMENT_DATA: PeriodicElement[] = [
-  {name: 'Hydrogen', style: 'H'},
-  {name: 'snakeViper', style: 'H'},
-  {name: 'HyViper', style: 'H'},
-  {name: 'HydroViper', style: 'H'},
-  {name: 'HViper', style: 'H'},
-  ];
-*/
 
 @Component({
   selector: 'app-sport',
@@ -44,7 +31,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 export class SportComponent implements OnInit {
 //Variable de classe qui contiendra notre tableau de tatoueurs
   sports: Sport[] = [];
-  displayedColumns: string[] = ['nom', 'style', 'action'];
+  displayedColumns: string[] = ['nom', 'horaire', 'action'];
 
   constructor(private sportService: SportService, private auth: AuthService,) {
   }

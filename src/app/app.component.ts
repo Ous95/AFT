@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
 import {Router, RouterLink, RouterOutlet} from '@angular/router';
-import {CookieComponent} from './cookie/cookie.component';
-import {SportComponent} from './components/sport/sport.component';
-import {ActiviteComponent} from './components/activite/activite.component';
 import {MatSidenav, MatSidenavContainer, MatSidenavContent} from '@angular/material/sidenav';
 import {MatListItem, MatNavList} from '@angular/material/list';
 import {MatIcon} from '@angular/material/icon';
