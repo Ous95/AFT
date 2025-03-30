@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {Adherent} from '../models/adherent.model';
 import {AuthService} from './auth/auth.service';
+import {Adherent} from '../models/adherent.model';
+
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class AdherentService {
   constructor(private http: HttpClient, private auth: AuthService) {
   }
 
-//fonction getAdherent : va utiliser http GET pour récupérer la liste JSON
+//fonction getTatoueur : va utiliser http GET pour récupérer la liste JSON
 // //Depuis l'url de l'API.
   getAdherents(): Observable<Adherent[]> {
     let adherents = this.http.get<Adherent[]>(this.apiUrl);
