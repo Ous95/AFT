@@ -1,0 +1,30 @@
+<p>Cultures :</p>
+<div [hidden]="!authenticated()">
+  <a routerLink="/culture/create">Ajouter un Culture</a>
+</div>
+<table mat-table [dataSource]="cultures" >
+  <ng-container matColumnDef="nom">
+    <th mat-header-cell *matHeaderCellDef> Nom </th>
+    <td mat-cell *matCellDef="let culture"> {{culture.nom}} </td>
+  </ng-container>
+  <ng-container matColumnDef="horaire">
+    <th mat-header-cell *matHeaderCellDef> Horaire </th>
+    <td mat-cell *matCellDef="let culture"> {{ culture.horaire }} </td>
+  </ng-container>
+  <ng-container *ngIf="authenticated()" matColumnDef="action">
+    <th mat-header-cell *matHeaderCellDef> Action </th>
+    <td mat-cell *matCellDef="let culture">
+      <a mat-button color="primary" [routerLink]="['/culture/', culture.id, 'view']">Voir</a>
+      <a mat-button color="accent" [routerLink]="['/culture/', culture.id, 'edit']">Modifier</a>
+      <button mat-button color="warn" (click)="deleteCulture(culture.id)">Supprimer</button>
+    </td>
+  </ng-container>
+  <ng-container *ngIf="!authenticated()" matColumnDef="action">
+    <th mat-header-cell *matHeaderCellDef> Action </th>
+    <td mat-cell *matCellDef="let culture">
+      <a mat-button color="primary" [routerLink]="['/culture/', culture.id, 'view']">Voir</a>
+    </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
