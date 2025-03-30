@@ -12,6 +12,10 @@ import {CoursComponent} from './components/cours/cours.component';
 import {SportCreateComponent} from './components/sport/sport-create/sport-create.component';
 
 import {ActiviteComponent} from './components/activite/activite.component';
+
+
+import {AdherentComponent} from './components/adherent/adherent.component';
+import {CultureComponent} from './components/culture/culture.component';
 export const routes: Routes = [
   {
     path: 'sport',
@@ -50,6 +54,19 @@ export const routes: Routes = [
     title: 'Nos Activite',
     component: ActiviteComponent,
   },
+
+  {
+    path: 'adherent',
+    title: 'Nos Adherents',
+    component: AdherentComponent,
+  },
+
+  {
+    path: 'culture',
+    title: 'Nos Culture',
+    component: CultureComponent,
+  },
+
 
 
 

@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import {ActivatedRoute, Router, RouterLink} from '@angular/router';
 import {SportService} from '../../../services/sport/sport.service';
 import {Sport} from '../../../models/sport.model';
+import {MatButtonToggle} from '@angular/material/button-toggle';
 @Component({
   selector: 'app-sport-view',
   standalone: true,
-  imports: [ RouterLink],
+  imports: [RouterLink, MatButtonToggle],
   templateUrl: './sport-view.component.html',
   styleUrl: './sport-view.component.css'
 })
