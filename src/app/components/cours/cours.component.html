@@ -1,11 +1,11 @@
-Vous trouverez ici tous nos cours de sport
-  <a routerLink="/sport">
-    Sport
-  </a>
-<br>
+<p>Vous trouverez dans cette page toutes les activité sportif, culturel ou autre ci dessous : </p>
 
-Vous trouverez ici tous nos autre activité
-<a routerLink ="/activite"> Activité</a>
 
-Vous trouverez ici tous nos autre activité
-<a routerLink ="/culture"> Culture</a>
+<mat-grid-list cols="4" rowHeight="2:1">
+  <mat-grid-tile> <a routerLink ="/activite"> Nos activités </a></mat-grid-tile>
+  <mat-grid-tile><a routerLink="/sport">Nos activités sportifs</a></mat-grid-tile>
+  <mat-grid-tile><a routerLink="/culture">Nos activités culturelles</a></mat-grid-tile>
+
+</mat-grid-list>
+
+
