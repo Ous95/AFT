@@ -32,7 +32,7 @@ import {AuthService} from '../../services/auth/auth.service';
 export class CultureComponent implements OnInit {
 //Variable de classe qui contiendra notre tableau de cultures
   cultures: Culture[] = [];
-  displayedColumns: string[] = ['nom', 'horaire', 'action'];
+  displayedColumns: string[] = ['nom', 'date', 'action'];
 
   constructor(private cultureService: CultureService,private auth: AuthService,) {
   }

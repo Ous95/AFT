@@ -4,8 +4,8 @@ import {FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/
 import {MatError, MatFormField, MatLabel} from '@angular/material/form-field';
 import {MatButton} from '@angular/material/button';
 import {MatInput} from '@angular/material/input';
-import {SportService} from '../../../services/sport/sport.service';
 
+import {SportService} from '../../../services/sport/sport.service';
 @Component({
   selector: 'app-sport-create',
   standalone: true,
@@ -20,7 +20,7 @@ export class SportCreateComponent {
   ngOnInit(): void {
     this.form = new FormGroup({
       nom: new FormControl('', [Validators.required]),
-      horaire: new FormControl('', Validators.required)
+      date: new FormControl('', Validators.required)
     });
   }
   submit(){

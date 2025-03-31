@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ActiviteService} from '../../services/activite.service';
-import {Activite} from '../../models/activite.model';
+
 import {RouterLink, RouterOutlet} from '@angular/router'
 
 import {MatAnchor, MatButton} from '@angular/material/button';
@@ -15,8 +14,10 @@ import {
   MatRowDef,
   MatTable, MatTableModule
 } from '@angular/material/table';
-import {AuthService} from '../../services/auth/auth.service';
 
+import {Activite} from '../../models/activite.model';
+import {ActiviteService} from '../../services/activite.service';
+import {AuthService} from '../../services/auth/auth.service';
 
 
 
@@ -32,7 +33,7 @@ import {AuthService} from '../../services/auth/auth.service';
 export class ActiviteComponent implements OnInit {
 //Variable de classe qui contiendra notre tableau de activites
   activites: Activite[] = [];
-  displayedColumns: string[] = ['nom', 'horaire', 'action'];
+  displayedColumns: string[] = ['nom', 'date', 'action'];
 
   constructor(private activiteService: ActiviteService,private auth: AuthService,) {
   }

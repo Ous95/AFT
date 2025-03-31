@@ -9,10 +9,10 @@
     }
   </mat-form-field>
   <mat-form-field appearance="outline" >
-    <mat-label>Horaire</mat-label>
-    <input matInput type="text" formControlName="horaire">
-    @if (form.get('horaire')?.hasError('required')) {
-      <mat-error>Horaire is required</mat-error>
+    <mat-label>Date</mat-label>
+    <input matInput type="text" formControlName="date">
+    @if (form.get('date')?.hasError('required')) {
+      <mat-error>Date is required</mat-error>
     }
   </mat-form-field>
   <router-outlet></router-outlet>

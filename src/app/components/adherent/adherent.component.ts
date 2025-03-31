@@ -32,7 +32,7 @@ import {AuthService} from '../../services/auth/auth.service';
 export class AdherentComponent implements OnInit {
 //Variable de classe qui contiendra notre tableau de adherents
   adherents: Adherent[] = [];
-  displayedColumns: string[] = ['nom', 'horaire', 'action'];
+  displayedColumns: string[] = ['nom', 'date', 'action'];
 
   constructor(private adherentService: AdherentService,private auth: AuthService,) {
   }

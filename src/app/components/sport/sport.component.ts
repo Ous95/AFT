@@ -31,7 +31,7 @@ import {AuthService} from '../../services/auth/auth.service';
 export class SportComponent implements OnInit {
 //Variable de classe qui contiendra notre tableau de tatoueurs
   sports: Sport[] = [];
-  displayedColumns: string[] = ['nom', 'horaire', 'action'];
+  displayedColumns: string[] = ['nom', 'date', 'action'];
 
   constructor(private sportService: SportService, private auth: AuthService,) {
   }

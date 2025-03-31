@@ -7,9 +7,9 @@
     <th mat-header-cell *matHeaderCellDef> Nom </th>
     <td mat-cell *matCellDef="let adherent"> {{adherent.nom}} </td>
   </ng-container>
-  <ng-container matColumnDef="horaire">
-    <th mat-header-cell *matHeaderCellDef> Horaire </th>
-    <td mat-cell *matCellDef="let adherent"> {{ adherent.horaire }} </td>
+  <ng-container matColumnDef="date">
+    <th mat-header-cell *matHeaderCellDef> Date </th>
+    <td mat-cell *matCellDef="let adherent"> {{ adherent.date }} </td>
   </ng-container>
   <ng-container *ngIf="authenticated()" matColumnDef="action">
     <th mat-header-cell *matHeaderCellDef> Action </th>
